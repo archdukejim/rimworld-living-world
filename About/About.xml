@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>RimSynapse - Living World</name>
+    <author>RimSynapse Team</author>
+    <packageId>RimSynapse.LivingWorld</packageId>
+    <url>https://github.com/RimSynapse/Living-World</url>
+    <modVersion>0.1.0</modVersion>
+    <supportedVersions>
+        <li>1.5</li>
+        <li>1.6</li>
+    </supportedVersions>
+    <!--
+        No modDependencies, deliberately — Living World stands on its own with nothing but the base
+        game. It does NOT require Map Mode Framework or Regions & Territories.
+
+        When Regions & Territories is present, Living World reads R&T's per-tile population endpoint
+        (by reflection, no assembly reference) to decide how many inhabitants a map's homesteads hold.
+        When it is absent, Living World generates its own modest 0-4 pawn settlements on habitable
+        tiles, deterministically from the world seed. Everything it publishes to RimSynapse Core
+        (residency) is reflection too, so Core stays optional in fact and not just on paper.
+    -->
+    <loadAfter>
+        <li>RimSynapse.Core</li>
+        <li>RimSynapse.RegionsAndTerritories</li>
+        <li>NozoMe.MapModeFramework</li>
+        <li>CETeam.CombatExtended</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+    </loadAfter>
+    <description>
+Discord Community: https://discord.gg/eVBebZ2N9s
+
+RimSynapse - Living World
+
+Brings inhabited maps to life. Where other mods count how many people a place should hold, Living World is what actually puts them there: homesteads and dwellings with residents who farm, cook, self-tend, forage in winter, and trade their surplus to passing traders — so the settlers you find on a map plausibly survive long enough to have built it.
+
+Standalone. With RimSynapse - Regions and Territories installed, Living World reads its regional population model to decide where and how densely to place inhabitants. On its own it seeds a modest number of homesteads on habitable tiles from the world seed. It requires neither Regions and Territories nor Map Mode Framework.
+
+Combat Extended is supported: when it is installed, residents are given the correct ammunition for their weapon. When it is not, nothing changes.
+    </description>
+</ModMetaData>
