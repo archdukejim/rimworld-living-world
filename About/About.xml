@@ -6,18 +6,17 @@
     <url>https://github.com/archdukejim/rimworld-living-world</url>
     <modVersion>0.1.0</modVersion>
     <supportedVersions>
-        <li>1.5</li>
         <li>1.6</li>
     </supportedVersions>
     <!--
         No modDependencies, deliberately — Living World stands on its own with nothing but the base
-        game. It does NOT require Map Mode Framework or Regions & Territories.
+        game. It does NOT require Map Mode Framework or Regions and Territories.
 
-        When Regions & Territories is present, Living World reads R&T's per-tile population endpoint
+        When Regions and Territories is present, Living World reads its per-tile population endpoint
         (by reflection, no assembly reference) to decide how many inhabitants a map's homesteads hold.
-        When it is absent, Living World generates its own modest 0-4 pawn settlements on habitable
-        tiles, deterministically from the world seed. Everything it publishes to RimSynapse Core
-        (residency) is reflection too, so Core stays optional in fact and not just on paper.
+        When it is absent, Living World generates its own modest homesteads on habitable tiles,
+        deterministically from the world seed. Everything it publishes to RimSynapse Core (residency)
+        is reflection too, so Core stays optional in fact and not just on paper.
     -->
     <loadAfter>
         <li>RimSynapse.Core</li>
@@ -31,13 +30,39 @@
     </loadAfter>
     <description>
 Discord Community: https://discord.gg/eVBebZ2N9s
+Version: v0.1.0 (Target: RimWorld 1.6)
 
 RimSynapse - Living World
+Official Wiki and Documentation: https://github.com/archdukejim/rimworld-living-world/wiki
 
-Brings inhabited maps to life. Where other mods count how many people a place should hold, Living World is what actually puts them there: homesteads and dwellings with residents who farm, cook, self-tend, forage in winter, and trade their surplus to passing traders — so the settlers you find on a map plausibly survive long enough to have built it.
+Brings inhabited maps to life. Where other mods count how many people a place should hold, Living World is what actually puts them there: homesteads and dwellings with residents who farm, cook, self-tend, forage in winter, and trade their surplus to passing traders — so the settlers you find on a map plausibly survived long enough to have built it.
 
-Standalone. With RimSynapse - Regions and Territories installed, Living World reads its regional population model to decide where and how densely to place inhabitants. On its own it seeds a modest number of homesteads on habitable tiles from the world seed. It requires neither Regions and Territories nor Map Mode Framework.
+--- What it does ---
+- Homestead generation: dwellings, fields and residents placed at map generation.
+- Self-sufficient residents: a caretaker keeps them alive - they tend their own wounds, cook to keep a small stock of meals, harvest their crops, and forage wild plants in winter.
+- Starting supplies: each resident spawns with medicine, meals and a modest non-explosive self-defence weapon.
+- Harvest brings a trader: harvesting a crop draws a passing trader who buys the surplus and leaves preserved food and supplies behind.
 
-Combat Extended is supported: when it is installed, residents are given the correct ammunition for their weapon. When it is not, nothing changes.
+All counts and thresholds are tunable in the mod settings.
+
+--- Standalone, and better together ---
+Living World requires neither Regions and Territories nor Map Mode Framework, and holds no hard reference to any other mod.
+
+- With RimSynapse - Regions and Territories: it reads that mod's regional population model to decide where and how densely to place inhabitants.
+- On its own: it seeds a modest number of homesteads on habitable tiles from the world seed.
+- With RimSynapse - Core: residency is shared so Conversations and Psychology can tell a resident from a passer-by.
+- With Combat Extended: residents are given the correct ammunition for their weapon.
+
+Each of these is optional. Every cross-mod link is soft, so nothing is required and nothing breaks when a partner mod is absent.
+
+--- Roadmap ---
+Deeper Regions and Territories integration (region-aware homestead makeup), more resident livelihoods, and richer trader behaviour. These ship when they are ready - no dates.
+
+--- Changelog (v0.1.0) - Initial release ---
+- First release. Extracted from RimSynapse - Regions and Territories as a standalone companion mod: the living-pawn layer (homesteads, residents, self-sufficiency and the harvest-trader loop) is now its own mod, so Regions and Territories can stay a pure map and territory model.
+- Standalone: works with or without Regions and Territories and Map Mode Framework.
+- Combat Extended and RimSynapse Core are supported through soft, optional hooks.
+
+Full version history: https://github.com/archdukejim/rimworld-living-world/wiki/Changelog
     </description>
 </ModMetaData>
