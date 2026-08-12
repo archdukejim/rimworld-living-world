@@ -3,7 +3,7 @@
     <name>RimSynapse - Living World</name>
     <author>RimSynapse Team</author>
     <packageId>RimSynapse.LivingWorld</packageId>
-    <url>https://github.com/RimSynapse/Living-World</url>
+    <url>https://github.com/archdukejim/rimworld-living-world</url>
     <modVersion>0.1.0</modVersion>
     <supportedVersions>
         <li>1.5</li>
