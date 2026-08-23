@@ -1,0 +1,5 @@
+# RimSynapse LivingWorld — shipped assembly manifest
+# version: 0.1.0
+# commit:  d9fd49e
+# format:  sha256sum — verify with 'verify-binaries.ps1' or 'sha256sum -c'
+14f7205fd4d949505b2513b50a7e78d1da2159986be74f3659e5ec1b7f775cee  RimSynapseLivingWorld.dll
